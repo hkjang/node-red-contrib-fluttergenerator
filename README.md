@@ -10,13 +10,15 @@ Install
 
 Run the following command in the root directory of your Node-RED install:
 
-    npm install node-red-contrib-fluttergenerator
+    npm install node-red-contrib-fluttergenerator --save
 
 Usage
 -----
 
-# fluttergenerator  
-
+# flutter generator  
+- Check the files under the template folder of node-red-contrib-fluttergenerator
+- bloc, router, stateful-page, stateless-page
+- To change the template, simply change the dart file under the template folder directory.
 
 ## sample parameters
 ```javascript
@@ -28,7 +30,7 @@ msg.resourceType = 'bloc';
 msg.componentName = 'test';
 // for windows
 msg.destination = 'D:\\project\\app\\lib\\pages';
-// for linux
+// for linux or macos
 // msg.destination = '/app/project/lib/pages';
 return msg;
 ```
