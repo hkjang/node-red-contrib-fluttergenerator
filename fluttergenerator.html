@@ -1,0 +1,40 @@
+
+<script type="text/x-red" data-template-name="fluttergenerator">
+    <div class="form-row">
+        <label for="node-input-resourceType"><i class="fa"></i>Resource Type</label>
+        <input type="text" id="node-input-resourceType" placeholder="resourceType">
+    </div>
+    <div class="form-row">
+        <label for="node-input-componentName"><i class="fa"></i>Name</label>
+        <input type="text" id="node-input-componentName" placeholder="componentName">
+    </div>
+
+</script>
+
+<script type="text/x-red" data-help-name="fluttergenerator">
+   <p>Request <b>msg.payload (resourceType, componentName, destination)</b> </p>
+   <p>Simple way to get to fluttergenerator API.</p>
+   <p><a href="https://www.npmjs.com/package/flutter-generator" target="_new">ref this</a></p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('fluttergenerator',{
+        category: 'function',
+        defaults: {
+            resourceType: {value:"", required:false},
+            componentName: {value:"", required:false}
+        },
+        color:"#43caf5",
+        icon: "fluttergenerator.png",
+        align: "left",
+        inputs:1,
+        outputs:1,
+        label: function() {
+            return this.name||"fluttergenerator";
+        },
+        labelStyle: function() {
+            return this.name?"node_label_italic":"";
+        }
+    });
+
+</script>
